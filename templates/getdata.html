@@ -1,0 +1,18 @@
+{% if fans_count%}
+ <p>you have {{fans_count}} fans!</p>
+{% endif %}
+
+{% if real_fans_counts%}
+ <p>Real Fans: {{real_fans_counts}}</p>
+{% endif %}
+
+{% if fake_fans_counts%}
+ <p>Fake Fans: {{fake_fans_counts}}</p>
+{% endif %}
+
+{% if unsure_counts%}
+ <p>Undetermined: {{unsure_counts}}</p>
+{% endif %}
+
+
+<a href="{{ url_for('index')}}">Return to home page</a>

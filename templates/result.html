@@ -1,0 +1,10 @@
+
+{%for i in range(num) %}
+<a href="{{ url_for('profile',id= id_lst[i] )}}">{{ id_lst[i] }} </a>
+
+<br/><br/>
+{%endfor%}
+
+
+
+<a href="{{ url_for('index')}}">Return to home page</a>

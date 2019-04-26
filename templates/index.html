@@ -1,0 +1,13 @@
+<html>
+   <body>
+     <p> welcome, please input the id of the weibo account you want to exam below!</p>
+      <form action = "http://localhost:5000/get_data" method = "POST">
+        <p>Weibo Id <input type ="text" name = "Id" /></p>
+        <p><input type = "submit" value = "submit" /></p>
+      </form>
+
+
+      <a href="{{ url_for('result')}}">Check history</a>
+
+   </body>
+</html>

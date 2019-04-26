@@ -1,9 +1,19 @@
-user_id='1787211337'
-fan_id = "1785162243"
+# -*- coding: utf-8 -*-
+import unittest
+from SI507project_tests import *
+from SI507project_tools import *
 
 
-proxy_addr="122.241.72.191:808"
-proxy_addr2="118.190.73.168:808"
-proxy_addr_homepage="115.216.119.174:808"
+class Problem1(unittest.TestCase):
+    def test_names_file(self):
+        with open("1787211337.csv") as csvfile:
+            self.assertTrue(csvfile is not None,"testing that file exists")
+            cont = csvfile.read()
+            self.assertTrue("Type" in cont.split("\n")[0])
+            self.assertTrue("id" in cont)
+            csvfile.close()
 
-# past the code into the tools file to make the tool run
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)
